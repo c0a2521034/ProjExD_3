@@ -172,7 +172,7 @@ def main():
                     bomb = None
                     bird.change_img(6, screen) #練習３画像変化
                     pg.display.update()
-                    time.sleep(1)
+                    time.sleep(1)    
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
