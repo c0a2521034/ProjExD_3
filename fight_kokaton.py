@@ -208,10 +208,10 @@ def main():
                         pg.display.update()
                         break
                         
-        for i, beam in enumerate(beams):
+        for i, beam in enumerate(beams):         
             if beam is not None:
                 if check_bound(beam.rct) != (True, True):
-                    beams[i] = None
+                    beams[i] = None  
 
         
         bombs = [bomb for bomb in bombs if bomb is not None]
