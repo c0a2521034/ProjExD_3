@@ -164,16 +164,14 @@ def main():
                 # スペースキー押下でBeamクラスのインスタンス生成
                 beam = Beam(bird)            
         screen.blit(bg_img, [0, 0])
-
-        if bomb is not None:
-            for bomb in bombs:
-                if bird.rct.colliderect(bomb.rct):
-                # ゲームオーバー時に，こうかとん画像を切り替え，1秒間表示させる
-                    bird.change_img(8, screen)
-                    pg.display.update()
-                    time.sleep(1)
-                    return
-
+        
+        if bird.rct.colliderect(bomb.rct):
+            # ゲームオーバー時に，こうかとん画像を切り替え，1秒間表示させる
+            bird.change_img(8, screen)
+            pg.display.update()
+            time.sleep(1)
+            return
+        
         if bomb is not None:
             for i, bomb in enumerate(bombs):
                 if beam is not None:
